@@ -1,0 +1,63 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:BatchGetImage",
+                "ecr:CompleteLayerUpload",
+                "ecr:CreateRepository",
+                "ecr:DeleteRepository",
+                "ecr:DeleteRepositoryPolicy",
+                "ecr:DescribeImages",
+                "ecr:DescribeRepositories",
+                "ecr:GetAuthorizationToken",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:InitiateLayerUpload",
+                "ecr:ListImages",
+                "ecr:PutImage",
+                "ecr:UploadLayerPart"
+            ],
+            "Resource": [
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/nginx",
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/node",
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/ubuntu",
+                "arn:aws:ecr:ap-south-1:account_id:repository/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "codecommit:BatchGetRepositories",
+                "codecommit:CancelUploadArchive",
+                "codecommit:CreateBranch",
+                "codecommit:CreateCommit",
+                "codecommit:CreatePullRequest",
+                "codecommit:CreateRepository",
+                "codecommit:DeleteBranch",
+                "codecommit:DeleteRepository",
+                "codecommit:GitPull",
+                "codecommit:GitPush",
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:GetPullRequest",
+                "codecommit:GetRepository",
+                "codecommit:GetRepositoryTriggers",
+                "codecommit:ListBranches",
+                "codecommit:ListPullRequests",
+                "codecommit:ListRepositories",
+                "codecommit:PutRepositoryTriggers",
+                "codecommit:TestRepositoryTriggers",
+                "codecommit:UpdateDefaultBranch",
+                "codecommit:UpdateRepositoryDescription",
+                "codecommit:UpdateRepositoryName"
+            ],
+            "Resource": [
+                "arn:aws:codecommit:ap-south-1:account_id:project_name",
+                "arn:aws:codecommit:ap-south-1:account_id:project_name-UI",
+                "arn:aws:codecommit:ap-south-1:account_id:project_name-Infra"
+            ]
+        }
+    ]
+}

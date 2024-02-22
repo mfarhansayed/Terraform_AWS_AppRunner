@@ -1,0 +1,71 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "codebuild:*",
+            "Resource": "arn:aws:codebuild:ap-south-1:account_id:project/project_name*"
+        },
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogStream",
+            "Resource": "arn:aws:logs:ap-south-1:account_id:log-group:*:log-stream:*"
+        },
+        {
+            "Sid": "VisualEditor7",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": [
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-ui-project:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-api-project:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-dev-test-backend:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-ui-uat-project:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-api-uat-project:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor8",
+            "Effect": "Allow",
+            "Action": "ecr:*",
+            "Resource": [
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/nginx",
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/node",
+                "arn:aws:ecr:ap-south-1:account_id:repository/project_name/ubuntu",
+                "arn:aws:ecr:ap-southeast-2:account_id:repository/project_name-api",
+                "arn:aws:ecr:ap-southeast-2:account_id:repository/project_name-ui",
+                "arn:aws:ecr:ap-southeast-2:account_id:repository/project_name-api",
+                "arn:aws:ecr:ap-southeast-2:account_id:repository/project_name-ui"
+            ]
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": "logs:PutLogEvents",
+            "Resource": [
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-api-project:log-stream:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-ui-project:log-stream:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-dev-test-backend:log-stream:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-api-uat-project:log-stream:*",
+                "arn:aws:logs:ap-south-1:account_id:log-group:/aws/codebuild/project_name-ui-uat-project:log-stream:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor5",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::project_name*"
+        },
+        {
+            "Sid": "VisualEditor6",
+            "Effect": "Allow",
+            "Action": "codecommit:*",
+            "Resource": [
+                "arn:aws:codecommit:ap-south-1:account_id:project_name-Infra",
+                "arn:aws:codecommit:ap-south-1:account_id:project_name-UI",
+                "arn:aws:codecommit:ap-south-1:account_id:project_name"
+            ]
+        }
+    ]
+}

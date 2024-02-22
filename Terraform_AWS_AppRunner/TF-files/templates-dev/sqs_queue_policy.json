@@ -1,0 +1,16 @@
+{
+    "Id": "__default_policy_ID",
+    "Statement": [
+      {
+        "Action": "SQS:*",
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::account_id:root"
+        },
+        "Resource": "arn:aws:sqs:ap-southeast-2:account_id:*",
+        "Sid": "__owner_statement"
+      }
+    ],
+    "Version": "2012-10-17"
+  }
+  

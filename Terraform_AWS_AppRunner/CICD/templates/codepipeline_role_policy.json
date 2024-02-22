@@ -1,0 +1,25 @@
+{
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Action" : "codebuild:*",
+        "Resource" : "arn:aws:codebuild:ap-south-1:account_id:project/project_name*",
+        "Effect" : "Allow"
+      },
+      {
+        "Action" : "codecommit:*",
+        "Resource" : [
+        "arn:aws:codecommit:ap-south-1:account_id:project_name-Infra",
+        "arn:aws:codecommit:ap-south-1:account_id:project_name-UI",
+        "arn:aws:codecommit:ap-south-1:account_id:project_name"
+        ],
+        "Effect" : "Allow"
+      },
+      {
+        "Effect" : "Allow",
+        "Action" : "s3:*",
+        "Resource" : "arn:aws:s3:::project_name*"
+      }
+    ]
+  }
+
