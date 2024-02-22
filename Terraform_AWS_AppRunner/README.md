@@ -4,7 +4,8 @@
 This repository uses terraform-terragrunt to automate infrastructure provisioning in project_name AWS account.
 
 ## DEVOPS Deployment Architecture
-![DevOps Deployment Architecture](https://github.com/mfarhansayed/Terraform_AWS_AppRunner/assets/84790596/f1412525-4451-4253-8d2a-f07f67ccb197)
+![DevOps Deployment Architecture](https://github.com/mfarhansayed/Terraform_AWS_AppRunner/assets/84790596/b90dfc51-8e42-4518-88f9-2cd988ba9faf)
+
 
 
 ## DEVOPS WORKFLOW
